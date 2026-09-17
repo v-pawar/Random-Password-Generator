@@ -1,42 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Random Password Generator</title>
+    <title>Random Password Generator</title>
 
-  <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <main class="container">
+      <section class="password-card">
+        <div class="icon">🔐</div>
 
-  <main class="container">
+        <h1>Password Generator</h1>
 
-    <div class="password-card">
+        <p class="subtitle">Create a strong and secure password instantly.</p>
 
-      <h1>Password Generator</h1>
+        <div class="password-area">
+          <div class="password-display">
+            <span id="result">Generate Password</span>
+          </div>
 
-      <p class="subtitle">
-        Generate a secure random password
-      </p>
+          <button id="copyButton" class="copy-btn">Copy</button>
+        </div>
 
-      <div class="password-box">
-        <p id="result">Click Generate</p>
+        <button id="button" class="generate-btn">Generate Password</button>
 
-        <button id="copyButton" class="copy-btn">
-          Copy
-        </button>
-      </div>
+        <p class="info">
+          🔒 Your password is generated locally in your browser.
+        </p>
+      </section>
+    </main>
 
-      <button id="button" class="generate-btn">
-        Generate Password
-      </button>
-
-    </div>
-
-  </main>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

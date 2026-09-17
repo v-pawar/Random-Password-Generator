@@ -1,29 +1,23 @@
+const characters =
+  "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
 
-      const characters =
-        "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*";
+const result = document.getElementById("result");
+const button = document.getElementById("button");
 
-      let password = "";
+function generatePassword() {
+  let password = "";
 
-      function random() {
-        password = "";
+  for (let i = 0; i < 8; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
 
-        for (let i = 0; i < 8; i++) {
-          const randomIndex = Math.floor(Math.random() * characters.length);
+    const randomCharacter = characters[randomIndex];
 
-          const randomCharacter = characters[randomIndex];
+    password += randomCharacter;
+  }
 
-          password += randomCharacter;
-        }
+  result.innerText = password;
+}
 
-        result.innerText = password;
-      }
-
-      let result = document.getElementById("result");
-
-      let button = document.getElementById("button");
-
-      button.addEventListener("click", () => {
-        console.log("button clicked");
-
-        random();
-      });
+button.addEventListener("click", () => {
+  generatePassword();
+});
